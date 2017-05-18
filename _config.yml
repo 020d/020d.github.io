@@ -1,0 +1,4 @@
+name: Zero2 0day
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
+
