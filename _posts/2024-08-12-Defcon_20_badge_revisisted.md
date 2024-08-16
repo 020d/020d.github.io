@@ -296,4 +296,4 @@ All done!  Victory sequence now flashes.
 
 ![Victory animation](https://020d.github.io/images/final_animation.mov)
 
-Of course during the con 12 years ago nobody had a FZ, in part 2 I'll look at the Spin language and how to unlock a solo badge in 2024.
+Of course during the con 12 years ago nobody had a FZ, in part 2 I'll look at the Spin language and how to unlock a solo badge in 2024 without a Flipper Zero.
