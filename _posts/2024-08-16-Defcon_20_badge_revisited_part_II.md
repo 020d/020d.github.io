@@ -45,8 +45,8 @@ Now driving this pattern continously would require a single-core processor with 
 
 ## And so then.........
 
-![Spin Tools Terminal](../images/spintoolsterm.jpg)
-![Badge LEDs lined up with EEPROM values](../images/eeprom_and_badge_leds.png)
+![Spin Tools Terminal](/images/spintoolsterm.jpg)
+![Badge LEDs lined up with EEPROM values](/images/eeprom_and_badge_leds.png)
 
 Putting together the pieces I've made a small tool for individually writing the EEPROM values for each badge type. The 8 LEDs on the badge reflect the current value in the EEPROM for that badge type and is updated as you modify their values. Press digits 0-7 to toggle each badge between 0x00 and 0xFF, then '9' to restart from the flash. 
 
@@ -55,7 +55,7 @@ I've set the LED brightness WAY down because the default LEDs are hecka bright a
 I've set the serial interface speed to 57600 baud, this matches the official firmware and makes it easy to test changes by pressing '9' to exit or just using the button on the badge. Otherwise if it's using the default of 9600 or whatever you end up constantly resetting the terminal and the badge when it garbles. Set your serial output speed consistently to save headaches.
 
 Run this from Spin Tools or similar using the RAM load NOT flash. 
-![GUI upload to RAM option](../images/ram_to_terminal.jpg) This let's you easily do a test/reboot loop and see the immediate changes to the badge output. At the conference a few people bricked their badges by accidentally pressing F11 instead of F10 so don't join that club. 
+![GUI upload to RAM option](/images/ram_to_terminal.jpg) This let's you easily do a test/reboot loop and see the immediate changes to the badge output. At the conference a few people bricked their badges by accidentally pressing F11 instead of F10 so don't join that club. 
 
 I grabbed some objects from [BadgeUtil](https://gist.github.com/indrora/3190747#file-badgeutil-zip) and [the firmware](https://forums.parallax.com/discussion/141494/Article-Parallax-Propeller-on-DEF-CON-20-Badge-Start-Here#Discussion_141494), be sure you have a copy of `basic_i2c_driver.spin` and `FullDuplexSerialPlusCog.spin` from BadgeUtil/firmware/ and also `jm_pwm8.spin` from the offical badge code in the same location for the object/library files to be included. 
 
