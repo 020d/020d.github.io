@@ -33,19 +33,19 @@ That way you won't have to deal with broken links in the internet archive.</deta
 
 Alright 8-core, 32-bit low-power processor, very cool. Especially way back in 2012.  
 
-First I ran into the [BadgeUtil](https://gist.github.com/indrora/3190747) project and took a look at that Spin code. I also looked around at the official Firmware code released by Defcon/LoST. Getting my head around the Spin language and how i2c and EEPROMs work I was able to put together my own badge progress tool. 
+First I ran into the [BadgeUtil](https://gist.github.com/indrora/3190747) project and took a look at that Spin code. I also looked around at the official Firmware code released by Defcon/1o57. Getting my head around the Propeller Spin language and how i2c and EEPROMs work I was able to put together my own badge progress tool. 
 
 Some cool things I learned from playing with the firmware and BadgeUtil code. 
 ### You need external clock sync
 If you're going to interface with the outside world, you need a synchronized clock. In this case you need to set clock mode like <code>_CLKMODE      = XTAL1 + PLL16X</code> or similar, this ensures the internal timing and the external timing match up.  Otherwise the serial communications will be garbled and not actually match the baud rate expected.
 ### The EEPROM on this board is using i2c communications
-... that means it's sending a signal over the wire to the chip using it's own protocol. The EEPROM libraries add little delays after sending the read and write signals to ensure enough time has passed, both that the write has completed, and that the i2c comms aren't being saturated.</details> 
-### he LEDs are using PWM (<a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Power_delivery">Pulse Width Modulation</a>) to control their brightness.
+... that means it's sending a signal over the wire to the chip using it's own protocol. The EEPROM libraries add little delays after sending the read and write signals to ensure enough time has passed, both that the write has completed, and that the i2c comms aren't being saturated.
+### The LEDs are using PWM (<a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Power_delivery">Pulse Width Modulation</a>) to control their brightness.
 This basically means using a flickering pattern fast enough to be invisible to the human eye. This is used in digital circuits to divide the amount of power used to drive an LED by setting a bit pattern that breaks it into a known percentage.
 
 For example let's say it's an 8-bit PWM sequence, a value of 15 would be in binary `11111111` which is always on. This would be 100% brightness. Setting the value to 14 however would result in a continuous pattern of `11111110` with each 0 bit decreasing the brightness by 12.5% so 87.5% brightness, 75% brightness, and so on. 
 
-Now driving this pattern continously would require a single-core processor with a single thread to run in a loop and carefully control timing while turning the LED pin on and off. However some chipsets have built in PWM capabilities. Reading the `jm_pwm8.spin` object code from the Badge firmware I can see that the task of handling the PWM is being delegated to a Parallax cog, additionally each cog appears to have 2 dedicated PWM channels ([forum disccusion](https://forums.parallax.com/discussion/175192/controlling-rgb-leds-with-pwm-in-spin)). What's great about this is you can drive several LEDs and control the brightness without the need of several PWM chips (like an LED rope has at regular intervals) and by placing task on the cogs your main thread can focus on it's logic instead of handling LEDs.</details>
+Now driving this pattern continously would require a single-core processor with a single thread to run in a loop and carefully control timing while turning the LED pin on and off. However some chipsets have built in PWM capabilities. Reading the `jm_pwm8.spin` object code from the Badge firmware I can see that the task of handling the PWM is being delegated to a Parallax cog, additionally each cog appears to have 2 dedicated PWM channels ([forum disccusion](https://forums.parallax.com/discussion/175192/controlling-rgb-leds-with-pwm-in-spin)). What's great about this is you can drive several LEDs and control the brightness without the need of several PWM chips (like an LED rope has at regular intervals) and by placing task on the cogs your main thread can focus on it's logic instead of handling LEDs.
 
 ## And so then.........
 
@@ -61,7 +61,7 @@ I've set the serial interface speed to 57600 baud, this matches the official fir
 Run this from Spin Tools or similar using the RAM load NOT flash. 
 ![GUI upload to RAM option](/images/ram_to_terminal.jpg) This let's you easily do a test/reboot loop and see the immediate changes to the badge output. At the conference a few people bricked their badges by accidentally pressing F11 instead of F10 so don't join that club. 
 
-I grabbed some objects from [BadgeUtil](https://gist.github.com/indrora/3190747#file-badgeutil-zip) and [the firmware](https://forums.parallax.com/discussion/141494/Article-Parallax-Propeller-on-DEF-CON-20-Badge-Start-Here#Discussion_141494), be sure you have a copy of `basic_i2c_driver.spin` and `FullDuplexSerialPlusCog.spin` from BadgeUtil/firmware/ and also `jm_pwm8.spin` from the offical badge code in the same location for the object/library files to be included. 
+I grabbed some objects from [BadgeUtil](https://gist.github.com/indrora/3190747#file-badgeutil-zip) and [the firmware](https://forums.parallax.com/discussion/141494/Article-Parallax-Propeller-on-DEF-CON-20-Badge-Start-Here#Discussion_141494), be sure you have a copy of `basic_i2c_driver.spin` and `FullDuplexSerialPlusCog.spin` from `BadgeUtil/firmware/` and also `jm_pwm8.spin` from the offical badge code all in the same location for the object/library files to be included. 
 
 ```
 '' SetEEPROMBadges.spin v1.0
