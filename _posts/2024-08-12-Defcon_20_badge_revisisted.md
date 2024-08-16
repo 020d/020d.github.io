@@ -3,7 +3,6 @@ layout: post
 title:  "Defcon 20 Badge Revisited - Part 1"
 date: 2024-08-12
 ---
-# Defcon 20 Badge Revisited - Part 1
 
 Recently I managed to get ahold of a Defcon 20 badge. My addiction continues to worsen as my badge collection grows in size. 
 
