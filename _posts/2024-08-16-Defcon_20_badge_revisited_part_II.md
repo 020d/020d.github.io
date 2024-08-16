@@ -3,7 +3,6 @@ layout: post
 title:  "Defcon 20 Badge Revisited - Part 2"
 date: 2024-08-16
 ---
-# Defcon 20 Badge Revisited - Part 2
 
 Now that I've fully unlocked my Defcon 20 badge, I'm a little bit sad I can't redo the whole sequence... or can I?
 
@@ -23,7 +22,7 @@ Example:
 <code>https://forums.parallax.com/showthread.php?141494-Article-Parallax-Propeller-on-DEF-CON-20-Badge-Start-Here!</code>
 Replace "showthread.php?" with a "discussion/" then the dash after the article number should also be a "/" resulting in:
 <code>https://forums.parallax.com/discussion/141494/Article-Parallax-Propeller-on-DEF-CON-20-Badge-Start-Here</code>
-</br>
+
 
 Same for the hacking discussion:
 <code>https://forums.parallax.com/showthread.php/141567-How-did-you-hack-your-DEF-CON-20-Badge</code>
@@ -39,8 +38,9 @@ First I ran into the [BadgeUtil](https://gist.github.com/indrora/3190747) projec
 Some cool things I learned from playing with the firmware and BadgeUtil code. 
 1. <details><summary>You need external clock sync</summary>If you're going to interface with the outside world, you need a synchronized clock. In this case you need to set clock mode like <code>_CLKMODE      = XTAL1 + PLL16X</code> or similar, this ensures the internal timing and the external timing match up.  Otherwise the serial communications will be garbled and not actually match the baud rate expected. </details>
 2. <details><summary>The EEPROM on this board is using i2c communications</summary> ... that means it's sending a signal over the wire to the chip using it's own protocol. The EEPROM libraries add little delays after sending the read and write signals to ensure enough time has passed, both that the write has completed, and that the i2c comms aren't being saturated.</details> 
-3. <details><summary>The LEDs are using PWM (<a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Power_delivery">Pulse Width Modulation</a>) to control their brightness.</summary> This basically means using a flickering pattern fast enough to be invisible to the human eye. This is used in digital circuits to divide the amount of power used to drive an LED by setting a bit pattern that breaks it into a known percentage. </br>
-For example let's say it's an 8-bit PWM sequence, a value of 15 would be in binary `11111111` which is always on. This would be 100% brightness. Setting the value to 14 however would result in a continuous pattern of `11111110` with each 0 bit decreasing the brightness by 12.5% so 87.5% brightness, 75% brightness, and so on. </br>
+3. <details><summary>The LEDs are using PWM (<a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Power_delivery">Pulse Width Modulation</a>) to control their brightness.</summary> This basically means using a flickering pattern fast enough to be invisible to the human eye. This is used in digital circuits to divide the amount of power used to drive an LED by setting a bit pattern that breaks it into a known percentage.
+For example let's say it's an 8-bit PWM sequence, a value of 15 would be in binary `11111111` which is always on. This would be 100% brightness. Setting the value to 14 however would result in a continuous pattern of `11111110` with each 0 bit decreasing the brightness by 12.5% so 87.5% brightness, 75% brightness, and so on. 
+
 Now driving this pattern continously would require a single-core processor with a single thread to run in a loop and carefully control timing while turning the LED pin on and off. However some chipsets have built in PWM capabilities. Reading the `jm_pwm8.spin` object code from the Badge firmware I can see that the task of handling the PWM is being delegated to a Parallax cog, additionally each cog appears to have 2 dedicated PWM channels ([forum disccusion](https://forums.parallax.com/discussion/175192/controlling-rgb-leds-with-pwm-in-spin)). What's great about this is you can drive several LEDs and control the brightness without the need of several PWM chips (like an LED rope has at regular intervals) and by placing task on the cogs your main thread can focus on it's logic instead of handling LEDs.</details>
 
 ## And so then.........
