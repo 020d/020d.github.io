@@ -92,7 +92,8 @@ There we have some progress. I've now "seen" another Human badge and one step of
 
 Fooling around with the IR codes file it's apparent that a sequential code is used with remote button 1 being an Artist, 2 being Press, etc.... we can copy and paste the initial code and make a new button for each role, easily sending them one at a time.
 
-<details><summary>Full .ir file for Flipper Zero</summary>
+<details>
+<summary>Full .ir file for Flipper Zero</summary>
 <pre><code>
 Filetype: IR signals file
 Version: 1
@@ -146,14 +147,15 @@ address: 08 00 00 00
 command: 07 00 00 00
 </code></pre>
 </details>
-</br>
+
+
 Cool!  Now sending these I can watch the Serial response and see them unlocked one at a time, gradually increasing my badge's status as I'm no longer a wallflower.
 
 
 
-<details><summary>Full sequence of screens til Defcon 20 badge unlocked</summary>
+### Full sequence of screens til Defcon 20 badge unlocked
 
-```
+``` 
 
 =========================
   D E F C O N   2 0 1 2
@@ -287,13 +289,12 @@ Or fher gb qevax lbhe Binygvar.
 Happy 20th Defcon
 
 1o57
-```
-</pre></details>
+``` 
 
 
 From Sleeping it off, to Wallflower, Slacker, Getting Around, Making Friends, Workin' the Con, Hustler, Big Schmooze to the final complete status.
 All done!  Victory sequence now flashes. 
 
-https://020d.github.io/images/final_animation.mov
+![Victory animation](https://020d.github.io/images/final_animation.mov)
 
 Of course during the con 12 years ago nobody had a FZ, in part 2 I'll look at the Spin language and how to unlock a solo badge in 2024.
