@@ -3,6 +3,7 @@ layout: post
 title:  "Defcon 20 Badge Revisited - Part 1"
 date: 2024-08-12
 ---
+# Defcon 20 Badge Revisited - Part 1
 
 Recently I managed to get ahold of a Defcon 20 badge. My addiction continues to worsen as my badge collection grows in size. 
 
@@ -45,7 +46,7 @@ FYI the Badge uses the slightly unique Parallax Serial Terminal protocol so you'
 
 The badge's normal loop is to check for other badge codes, and periodically transmit it's own. Let's catch this IR code with a Flipper Zero.
 
-![Flipper Zero screen, IR files](../images/flipper_ir_files.jpg)
+![Flipper Zero screen, IR files](/images/flipper_ir_files.jpg)
 
 Quickly caught, and saved as a remote, we can pull the data off and edit.
 <pre><code>
@@ -147,10 +148,13 @@ command: 07 00 00 00
 </details>
 </br>
 Cool!  Now sending these I can watch the Serial response and see them unlocked one at a time, gradually increasing my badge's status as I'm no longer a wallflower.
-</br></br>
+
+
 
 <details><summary>Full sequence of screens til Defcon 20 badge unlocked</summary>
-<pre><code>
+
+```
+
 =========================
   D E F C O N   2 0 1 2
 =========================
@@ -283,7 +287,10 @@ Or fher gb qevax lbhe Binygvar.
 Happy 20th Defcon
 
 1o57
-</code></pre></details></br>
+```
+</pre></details>
+
+
 From Sleeping it off, to Wallflower, Slacker, Getting Around, Making Friends, Workin' the Con, Hustler, Big Schmooze to the final complete status.
 All done!  Victory sequence now flashes. 
 
