@@ -61,7 +61,9 @@ I've set the serial interface speed to 57600 baud, this matches the official fir
 Run this from Spin Tools or similar using the RAM load NOT flash. 
 ![GUI upload to RAM option](/images/ram_to_terminal.jpg) This let's you easily do a test/reboot loop and see the immediate changes to the badge output. At the conference a few people bricked their badges by accidentally pressing F11 instead of F10 so don't join that club. 
 
-I grabbed some objects from [BadgeUtil](https://gist.github.com/indrora/3190747#file-badgeutil-zip) and [the firmware](https://forums.parallax.com/discussion/141494/Article-Parallax-Propeller-on-DEF-CON-20-Badge-Start-Here#Discussion_141494), be sure you have a copy of `basic_i2c_driver.spin` and `FullDuplexSerialPlusCog.spin` from `BadgeUtil/firmware/` and also `jm_pwm8.spin` from the offical badge code all in the same location for the object/library files to be included. 
+I grabbed some objects from [BadgeUtil](https://gist.github.com/indrora/3190747#file-badgeutil-zip) and [the firmware](https://forums.parallax.com/discussion/141494/Article-Parallax-Propeller-on-DEF-CON-20-Badge-Start-Here#Discussion_141494), be sure you have a copy of [basic_i2c_driver.spin](/assets/Basic_I2C_Driver.spin) and [FullDuplexSerialPlusCog.spin](/assets/FullDuplexSerialPlusCog.spin) from `BadgeUtil/firmware/` and also [jm_pwm8.spin](/assets/jm_pwm8.spin) from the offical badge code all in the same location for the object/library files to be included. 
+
+Here's [SetEEPROMBadges.spin](/assets/SetEEPROMBadges.spin)
 
 ```
 '' SetEEPROMBadges.spin v1.0
