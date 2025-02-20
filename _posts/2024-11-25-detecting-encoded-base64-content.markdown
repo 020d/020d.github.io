@@ -134,7 +134,7 @@ We run it against the Emerging Threats open source IDS ruleset and verify no exi
 
 ![Dalton output showing Emerging Threats lacking detection for the base64 encoded "powershell"](/images/ET_no_detection.png)
 
-Now the trick is to detect the partial content, jumb BACK to align the base64 chunk start, decode the base64 data at the arbitrary position and then do a full internal content match verifying our detection with the decoded base64 content.
+Now the trick is to detect the partial content, jump BACK to align the base64 chunk start, decode the base64 data at the arbitrary position and then do a full internal content match verifying our detection with the decoded base64 content.
 
 ![Dalton rule detecting partial encoded content then backtracking and verifying a full match.](/images/dalton_initial_rule.png)
 ![Dalton showing offset 0 detection](/images/dalton_offset0_detected.png)
