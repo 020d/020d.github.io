@@ -139,21 +139,21 @@ UE9X
 
 Using a regular expression syntax we can write a rule that works with every possible encoded permutation.
 
-`(c|U)(G|E)9(3|X)(Z|R)(X|V)J(z|T)(a|S)(G|E)V(s|M)(T|b)`
+`[cU][GE]9[3X][ZR][XV]J[zT][aS][GE]V[sM][Tb]`
 
 Aligned for 4 bytes for easier viewing:
 
 ```
-(c|U)(G|E)9(3|X)
-(Z|R)(X|V)J(z|T)
-(a|S)(G|E)V(s|M)
-(T|b)
+[cU][GE]9[3X]
+[ZR][XV]J[zT]
+[aS][GE]V[sM]
+[Tb]
 ```
 
 Testing this against every permutation we can verify it's hitting each line successfully:
 
 ```
-% cat encodedps.txt|grep -E "(c|U)(G|E)9(3|X)(Z|R)(X|V)J(z|T)(a|S)(G|E)V(s|M)(T|b)"|wc -l 
+% cat encodedps.txt|grep -E "[cU][GE]9[3X][ZR][XV]J[zT][aS][GE]V[sM][Tb]"|wc -l 
     1024
 ```
 
