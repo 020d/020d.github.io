@@ -21,7 +21,7 @@ I then grabbed the [board schematic](https://media.defcon.org/DEF%20CON%2032/DEF
 
 <img src="/images/dc32badgeschematic.jpg" width="auto" width="100%" alt="Image of accurate vector board schematic."/>
 
-In Inkscape I started with rectangle shapes to add some backing and lift the board and reduct pressure on the components. Using straight edges and 90º angles I left openings where anything was soldered to the board and gradually filled in the space with a shape that would fit tight and not rock back and forth over any components. 
+In Inkscape I started with rectangle shapes to add some backing and lift the board and reduce pressure on the components. Using straight edges and 90º angles I left openings where anything was soldered to the board and gradually filled in the space with a shape that would fit tight and not rock back and forth over any components. 
 
 After filling it in pretty good I noticed two of the holes I'd left vaguely resembled eyes, and decided I might as well curve it up a bit since [Mar](http://spux.art) would probably use curves instead. At that point I figured.... why not go full cat? 😻 Here's the design progression.
 
