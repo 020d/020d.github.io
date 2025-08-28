@@ -37,6 +37,9 @@ So it turned out using the contour ended up useful after all. Due to battery thi
 
 You'll want to gently rest the squishy part roughly between the buttons if your battery is thin and it's still loose. BTW if you haven't opened your badge before, be very gentle. You don't need a screwdriver or a spudger or anything, just pinch top/bottom with one hand from the hole between the ears to the USB opening in the shell. While you're applying a light upward pressure just very lightly press down and outward on one latch with the other hand thumb until you feel a slight movement.  Then move to the other latch on the same side and repeat.  After 2 or 3 light clicks it'll just come right open. Just don't snap them off. 😿
 
+<img src="/images/dc32badgeriseradded.jpeg" width="auto" width="100%" alt="Yellow vendor badge showing battery riser resting on board.."/>
+Awwwww it's smiling at me!
+
 <img src="/images/dc32badgesetup.jpeg" width="auto" width="100%" alt="Yellow vendor badge showing squishy band resting on top of battery as if connecting the buttons on each side. Cover not yet installed."/>
 
 Print that part as wide as you need or like.  5mm works fine, or 10mm, whatever. It's only 1 wall thick so plenty soft. 
