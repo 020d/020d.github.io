@@ -9,6 +9,7 @@ The Defcon 32 badge was a spectacular accomplishment using the unrelease Raspber
 One issue some have noted is the lack of battery mounting which allows it to slide around and rub against the board components, potentially puncturing the battery at some point. Some have leaked but that's probably more a manufacturing thing. 
 
 <img src="/images/dc32badgebattery.jpg" width="auto" width="100%" alt="Underside of badge battery looking pretty beaten up, obvious indents where chips and surface mount components pressed against it."/>
+**Note:** After talking with some badge collectors, the goopy smudge you see on the bottom of my battery is due to some leftover solder flux on the board. A small number of boards didn't get fully cleaned off in production and leftover paste has caused some corrosion on those boards. Indeed I spotted a bit of rot around my test pins 37, 38 and that general area which I've since cleaned off with Isopropyl Alchohol. Read up on solder flux corrosion if you haven't heard, and don't leave sloppy boards after soldering some project.  
 
 Here's the process by which I came up with something serviceable that works with a range of battery thicknesses. 
 
