@@ -81,7 +81,7 @@ _Meet the family_
 
 <img src="/images/andnxor31thefamily.png" width="auto" width="100%" alt="Table showing several unique color combo printed face plates."/>
 
-_*That's right I glow in the daaaaark!*_
+_**That's right I glow in the daaaaark!**_
 
 <img src="/images/andnxor31glowing.png" width="auto" width="100%" alt="Glow in the dark filament badge shining brightly in pitch black."/>
 
