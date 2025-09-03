@@ -88,7 +88,7 @@ _*That's right I glow in the daaaaark!*_
 Thanks to the AND!XOR crew for another amazing badge!  
 
 
-<video autoplay muted playsinline loop>
+<video autoplay muted playsinline loop width="100%">
   <source src="/images/blinky5n4ck3y.mp4" type="video/mp4" alt="Badge blinking wildly with LEDs showing through newly translucent front."/>
 </video>
 
