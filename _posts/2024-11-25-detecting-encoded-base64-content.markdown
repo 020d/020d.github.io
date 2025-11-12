@@ -5,7 +5,7 @@ date:   2024-11-25
 ---
 This is a concept I developed a few years ago and have been meaning to getting around to publicly sharing. I make no claim to being the first to discover the technique, but was unable to find any documented evidence of the method being used previously. Essentially there are 2 fundamental issues with detecting base64 encoded strings, both of which often frustrate the blue team, my technique solves both problems. This post will go into the first problem, and the next will dive into the 2nd.
 
-Let me just first point to how base64 encoding text is often detected by defenders.
+Let me just first point to how base64 encoded text is often detected by defenders.
 
 Let's say you're looking to detect and alert on the encoded string "powershell". Without understanding how the base64 algorithm works many will simple encode "powershell" in CyberChef or their tool of choice, and write a detection from the output. Let's use an example:
 
