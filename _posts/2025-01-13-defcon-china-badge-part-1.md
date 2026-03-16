@@ -6,12 +6,12 @@ date:   2025-01-13
 
 The Defcon China 1.0 Badge is an interesting piece of history.  This is the first flexible circuit board badge used by the Defcon conference.
 
-![Flexible badge!](https://media.defcon.org/DEF%20CON%20China%201/DEF%20CON%20China%201%20badge/DEF%20CON%20China%201.0%20-%20dcn1%20bdg%20img3.jpg)
+<img src="/images/defcon_china_badge_bent.jpg" class="child-div" alt="Flexible badge!"/>
 
 From watching the interviews and background, circuit design changes were made to enable a flexible board. One issue in the prototypes phase was the potential for pins to bridge between chips when bending. You can't just make a flexible board with the same design as usual, so components were spaced out and pins are placed where they can't reach each other.  
 
 
-<img src="https://media.defcon.org/DEF%20CON%20China%201/DEF%20CON%20China%201%20badge/DEF%20CON%20China%201%20Flexi%20Badge%20-%20back%201.jpg" width="auto" width="100%" alt="Pic of active component strip"/>
+<img src="/images/defcon_china_badge_back.jpg" width="auto" width="100%" alt="Pic of active component strip"/>
 
 As for the board challenge, they wanted to encourage attendees to visit different villages and sections of the conference, in order to set flags on the badge unlocking specific LED lights. Some of these flags are enabled by directly interacting with the badge, but most are intended for village unlocks. 
 

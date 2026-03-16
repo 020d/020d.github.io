@@ -2,6 +2,7 @@
 layout: post
 title:  "AND!XOR Badge - Part 1"
 date:   2025-08-24
+image: /images/andnxor31wood.png
 ---
 
 I was super excited to finally aquire a much coveted AND!XOR 31 badge. Through searches and archive hunting I've learned that there was an early access kickstarter type pre-sale which partially funded the free badges they gave away in the 5n4ck3y vending machine. Some of those pages are no longer around but I've found there was at least 3 badge front plates, the wooden which I have, and a diamond and metal for various sponsor levels. 
