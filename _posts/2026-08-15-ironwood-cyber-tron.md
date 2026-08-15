@@ -35,3 +35,8 @@ The STL files!
 
 I honestly haven't gotten the print where I'm perfectly happy with it yet. Skipping supports wasn't a great idea, and cleaning that is less annoying that drooping overhangs blocking the PCB from fitting right.  I also might need to put in a new nozzle as some elephant foot issues are making it too tight.  I'll update later when I've done more with the thing.
 
+Some links:
+
+[Official Badge page](https://ironwoodcybervalet.com/DC30)
+
+[Badge repo](https://github.com/Ironwood-Cyber/dc30-badge-hw)
