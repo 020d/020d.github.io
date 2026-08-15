@@ -27,6 +27,8 @@ Some more images for the curious....
 <img src="/images/Tron%20-%204.png" width="auto" width="100%" alt="Close up shot of some guy's face on the inner board"/>
 <img src="/images/Tron%20-%205.png" width="auto" width="100%" alt="Inside shot of many callout names"/>
 <img src="/images/Tron%20-%206.png" width="auto" width="100%" alt="Side by side of original inner print and new one"/>
+<img src="/images/Tron%20-%207.png" width="auto" width="100%" alt="First frame of that video because it looked soo cool"/>
+<img src="/images/Tron%20-%200.png" width="auto" width="100%" alt="Header image of this post in full"/>
 
 The yellow look of the glow in the dark PLA in daylight doesn't actually mess up the colors, and it looks awesome in a dark room once powered off. Sadly I can't identify the maker of this specific PLA. They have widely different brightness and print quality however, so try a few.
 
