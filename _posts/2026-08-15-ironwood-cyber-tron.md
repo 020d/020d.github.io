@@ -30,12 +30,12 @@ Some more images for the curious....
 <img src="/images/Tron%20-%207.png" width="auto" width="100%" alt="First frame of that video because it looked soo cool"/>
 <img src="/images/Tron%20-%200.png" width="auto" width="100%" alt="Header image of this post in full"/>
 
-The yellow look of the glow in the dark PLA in daylight doesn't actually mess up the colors, and it looks awesome in a dark room once powered off. Sadly I can't identify the maker of this specific PLA. They have widely different brightness and print quality however, so try a few.
+The yellowish look of the glow in the dark PLA in daylight doesn't actually mess up the colors, and it looks awesome in a dark room once powered off. Sadly I can't identify the maker of this specific PLA. They have widely different brightness and print quality however, so try a few.
 
 The STL files!
 [Outer ring STL](/assets/OuterRing.stl) [Inner ring STL](/assets/InnerRing.stl)
 
-I honestly haven't gotten the print where I'm perfectly happy with it yet. Skipping supports wasn't a great idea, and cleaning that is less annoying that drooping overhangs blocking the PCB from fitting right.  I also might need to put in a new nozzle as some elephant foot issues are making it too tight.  I'll update later when I've done more with the thing.
+I honestly haven't gotten the print where I'm perfectly happy with it yet. Skipping supports wasn't a great idea. Cleaning supports is annoying but it's much easier than fixing drooping overhangs. I also might need to put in a new nozzle as some elephant foot issues are jamming some sections.  I'll update later when I've done more with the thing.
 
 Some links:
 
