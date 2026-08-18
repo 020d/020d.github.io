@@ -18,15 +18,17 @@ Starting out by examining the board, it would not power on. Though a brief blink
 
 <img src="/images/mr_robot_v1-02.png"  width="auto" width="100%" alt="Close up of battery holder and power adaptor chip"/>
 
-After finding it's datasheet and identifying pin 1 by the dot you can see there, I verified it was correctly outputting 3.3v and not 1.5v sooo.... what's the deal? I attempted to power it from the UART pins with a FTDI board set to 3.3v and though the blue pin lit up, nothing was seen on the serial TX pin at all.  Reviewing the code to the v2 board, I noticed they didn't set up serial output anywhere, so likely the v1 board behaves the same way and is very bare bones with no output while running the badge firmware. 
+After finding it's datasheet and identifying pin 1 by the dot you can see there, I verified it was correctly outputting 3.3v and not 1.5v sooo.... what's the deal? I attempted to power it from the UART pins with a FTDI board set to 3.3v. Though the blue pin lit up, nothing was seen on the serial TX pin at all.  Reviewing the code to the v2 board, I noticed they didn't set up serial output anywhere, so likely the v1 board behaves the same way and is very bare bones with no output while running the badge firmware. So looking for serial output with the screen command isn't the right approach. 
 
-The board however couldn't even be identified by the esptool. Since I had a flash process example from the v2 Starter Pack page, and the BIN for v1 from hackaday I figured maybe I just needed to flash what was a failed write.  But after several attempts the board just wasn't communicating at all, but some random bytes could get read, no data passing CRC checks came through. 
+We need to use the ESP tools to test this one. The board however, couldn't even be identified by esptool. Since I had a [flash process example](https://github.com/kscottz/MrRobotStarterPack#flashing-firmware) from the v2 Starter Pack page, and the BIN for v1 from hackaday I figured maybe I just needed to flash what was a failed write.  But after several attempts the board just wasn't communicating at all, but some random bytes could get read, no data passing CRC checks came through. 
 
 Taking a closer look at the VCC and GND on the ESP8266 board I finally noticed the extremely dry pins and a failed soldering job. 
 
-<img src="/images/mr_robot_v1-03.png"  width="auto" width="100%" alt="Macro shot of MCU board very close where zero solder is seen connecting pins to PCB"/> 
+<img src="/images/mr_robot_v1-03.png"  width="auto" width="48%" alt="Macro shot of MCU board very close where zero solder is seen connecting pins to PCB"/> 
+<img src="/images/mr_robot_v1-03.5.png"  width="auto" width="48%" alt="Another macro shot of MCU board very close where zero solder is seen connecting pins to PCB"/> 
+Dry as a bone! 💀
 
-It finally made sense.  In the rush to have the boards done in time for defcon, the pogo pin FTDI was used to hold the programmer in place and attempt a write. If the badge booted and showed "Mr Robot Badge" it got a serial number written on it and went into the "good" box. If it failed to write a couple times.... there wasn't any time to troubleshoot the badge so it went in the "bad" box for.... I dunno.... disposal?  It got an "X" serial number. Maybe they gave them away for free. 
+It finally made sense.  In the rush to have the boards done in time for defcon, the pogo pin FTDI was used to hold the programmer in place and attempt a write. If the badge booted and showed "Mr Robot Badge", it got a serial number written on it and went into the "good" box. If it failed to write a couple times.... there wasn't any time to troubleshoot the badge so it went in the "bad" box for.... I dunno.... disposal?  It got an "X" serial number. Maybe they gave them away for free. 
 
 Here's a valid badge rear... unlike mine:
 <img src="/images/mr_robot_v1-04.jpeg" width="auto" width="100%" alt="Clean badge back showing serial number 103"/>
@@ -56,3 +58,5 @@ And we are..... GOOD!
 Notice the unique serial "X" on this resurrected badge. 😎  
 
 Really glad I took a chance on this one. More board repair in the future.....
+
+Update: Ok so [not totally unique](https://www.worthpoint.com/worthopedia/official-defcon-25-mr-robot-badge-1881890346).  ([Archive](/images/mr_robot_v1_worthpoint.jpg)) 
