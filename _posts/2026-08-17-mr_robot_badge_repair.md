@@ -26,12 +26,12 @@ Taking a closer look at the VCC and GND on the ESP8266 board I finally noticed t
 
 <img src="/images/mr_robot_v1-03.png"  width="auto" width="100%" alt="Macro shot of MCU board very close where zero solder is seen connecting pins to PCB"/> 
 
-It finally made sense.  In the rush to have the boards done in time for defcon, the pogo pin FTDI was used to hold the programmer in place and attempt a write. If the badge booted and showed "Mr Robot Badge" it got a serial number written on it and into the "good" box. If it failed to write a couple times.... there wasn't any time to troubleshoot the badge so it went in the "bad" box for.... I dunno.... disposal?  It got an "X" serial number. 
+It finally made sense.  In the rush to have the boards done in time for defcon, the pogo pin FTDI was used to hold the programmer in place and attempt a write. If the badge booted and showed "Mr Robot Badge" it got a serial number written on it and went into the "good" box. If it failed to write a couple times.... there wasn't any time to troubleshoot the badge so it went in the "bad" box for.... I dunno.... disposal?  It got an "X" serial number. Maybe they gave them away for free. 
 
-Here's a valid badge rear:
+Here's a valid badge rear... unlike mine:
 <img src="/images/mr_robot_v1-04.jpeg" width="auto" width="100%" alt="Clean badge back showing serial number 103"/>
 
-Time to bust out my new microscope and fix the pins.
+Time to bust out my new microscope and fix the pins. Almost done!
 
 <img src="/images/mr_robot_v1-05.png" width="auto" width="100%" alt="Extreme macro shot showing fixed solder pins."/>
 
