@@ -14,7 +14,7 @@ This finally gave me a good excuse to install KiCad and review board files.
 
 With the electronic schematic showing the logical design, and the board files showing the physical layout I definitely have no excuse not to be able to get this working. 😬 
 
-Starting out examining the board it would not power on. Though a brief blink of the blue LED on the ESP miniboard showed some level power power was getting through. I used a multimeter on the VCC and GND pins of the package and saw a weird 1.5v supply.  That lead me to testing the battery packs and the power convertor chip. 
+Starting out by examining the board, it would not power on. Though a brief blink of the blue LED on the ESP miniboard showed that some level of power was getting through. I used a multimeter on the VCC and GND pins of the package and saw a weird 1.5v supply.  That lead me to testing the battery packs and the power convertor chip. 
 
 <img src="/images/mr_robot_v1-02.png"  width="auto" width="100%" alt="Close up of battery holder and power adaptor chip"/>
 
