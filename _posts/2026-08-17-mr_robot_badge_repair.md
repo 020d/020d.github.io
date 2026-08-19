@@ -28,7 +28,7 @@ Taking a closer look at the VCC and GND on the ESP8266 board I finally noticed t
 <img src="/images/mr_robot_v1-03.5.png"  width="auto" width="48%" alt="Another macro shot of MCU board very close where zero solder is seen connecting pins to PCB"/> 
 Dry as a bone! 💀
 
-It finally made sense.  In the rush to have the boards done in time for defcon, the pogo pin FTDI was used to hold the programmer in place and attempt a write. If the badge booted and showed "Mr Robot Badge", it got a serial number written on it and went into the "good" box. If it failed to write a couple times.... there wasn't any time to troubleshoot the badge so it went in the "bad" box for.... I dunno.... disposal?  It got an "X" serial number. Maybe they gave them away for free. 
+It finally made sense.  In the rush to have the boards done in time for defcon, the pogo pin FTDI was used to hold the programmer in place and attempt a write. If the badge booted and showed "Mr Robot Badge", it got a serial number written on it and went into the "good" box. If it failed to write a couple times.... there wasn't any time to troubleshoot the badge so it went in the "bad" box for.... I dunno.... disposal?  It got an "X" serial number. Maybe they gave them away for free. Update: [Some of them took a trip](https://newscrewdriver.com/2022/04/07/surface-mount-repair-practice-with-mr-robot-badge/#:~:text=at%20a%20past%20Hackaday%20Superconference%2c%20I%20had%20the%20chance%20to%20play%20with%20a%20small%20batch%20of%20%22Mr.%20Robot%20Badge%22%20that%20were%20deemed%20defective%20for%20one%20reason%20or%20another%2e) to [Supercon!](https://hackaday.com/tag/supercon/)
 
 Here's a valid badge rear... unlike mine:
 <img src="/images/mr_robot_v1-04.jpeg" width="auto" width="100%" alt="Clean badge back showing serial number 103"/>
@@ -59,4 +59,4 @@ Notice the unique serial "X" on this resurrected badge. 😎
 
 Really glad I took a chance on this one. More board repair in the future.....
 
-Update: Ok so [not totally unique](https://www.worthpoint.com/worthopedia/official-defcon-25-mr-robot-badge-1881890346).  ([Archive](/images/mr_robot_v1_worthpoint.jpg)) 
+Update: Ok so [not _totally_ unique](https://www.worthpoint.com/worthopedia/official-defcon-25-mr-robot-badge-1881890346).  ([Archive](/images/mr_robot_v1_worthpoint.jpg)) 
